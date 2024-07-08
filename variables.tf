@@ -18,7 +18,6 @@ variable "google_kms_key_ring_project" {
 variable "google_kms_crypto_key_name" {
   type = string
   description = "The name of the key, for example gke-key"
-  default = "gke-key"
 }
 
 variable "google_kms_crypto_key_key_ring" {
