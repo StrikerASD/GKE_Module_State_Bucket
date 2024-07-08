@@ -14,6 +14,9 @@ resource "google_kms_crypto_key_iam_member" "iam_for_crypto_key" {
   crypto_key_id = var.google_kms_crypto_key_iam_member_crypto_key_id
   role          = var.google_kms_crypto_key_iam_member_role
   member        = var.google_kms_crypto_key_iam_member_member
+  depends_on = [
+    google_kms_crypto_key.my_key
+  ]
 }
 
 resource "google_storage_bucket" "terraform_state_bucket" {
