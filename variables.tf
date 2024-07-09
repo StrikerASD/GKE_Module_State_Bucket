@@ -65,8 +65,3 @@ variable "google_storage_bucket_lifecycle_rule_action_type" {
   description = "What action to take when 30 days will go by. Default is - delete"
   default = "delete"
 }
-
-variable "google_storage_bucket_encryption_default_kms_key_name" {
-  type = string
-  description = "Example - https://github.com/StrikerASD/gcp-infra/blob/main/terraform/tfstate-bucket.tf#L37"
-}
