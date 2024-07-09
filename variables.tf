@@ -20,11 +20,6 @@ variable "google_kms_crypto_key_name" {
   description = "The name of the key, for example gke-key"
 }
 
-variable "google_kms_crypto_key_key_ring" {
-  type = string
-  description = "Name of a key ring. The example might be like that: (key_ring = google_kms_key_ring.my_keyring.id). Depends on resource name - my_keyring in this example"
-}
-
 variable "google_kms_crypto_key_rotation_period" {
   type = string
   description = "Rotation period in which key should be replaced"
