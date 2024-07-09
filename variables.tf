@@ -63,5 +63,5 @@ variable "google_storage_bucket_lifecycle_rule_condition_age" {
 variable "google_storage_bucket_lifecycle_rule_action_type" {
   type = string
   description = "What action to take when 30 days will go by. Default is - delete"
-  default = "delete"
+  default = "Delete"
 }
