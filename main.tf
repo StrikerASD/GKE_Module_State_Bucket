@@ -4,11 +4,11 @@ resource "google_kms_key_ring" "my_keyring" {
   project  = var.google_kms_key_ring_project
 }
 
-# resource "google_kms_crypto_key" "my_key" {
-#   name            = var.google_kms_crypto_key_name
-#   key_ring        = var.google_kms_crypto_key_key_ring
-#   rotation_period = var.google_kms_crypto_key_rotation_period
-# }
+resource "google_kms_crypto_key" "my_key" {
+  name            = var.google_kms_crypto_key_name
+  key_ring        = var.google_kms_crypto_key_key_ring
+  rotation_period = var.google_kms_crypto_key_rotation_period
+}
 
 resource "google_kms_crypto_key_iam_member" "iam_for_crypto_key" {
   crypto_key_id = var.google_kms_crypto_key_iam_member_crypto_key_id
