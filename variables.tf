@@ -11,7 +11,6 @@ variable "google_service_account_display_name" {
 variable "google_kms_key_ring_name" {
   type = string
   description = "Please enter keyring name"
-  default = "gke-keyring"
 }
 
 variable "google_kms_key_ring_location" {

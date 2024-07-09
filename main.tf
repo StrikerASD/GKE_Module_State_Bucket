@@ -34,6 +34,10 @@ resource "google_storage_bucket" "terraform_state_bucket" {
 
   uniform_bucket_level_access = true
 
+  depends_on = [
+    google_kms_crypto_key_iam_member.crypto_key_encrypter_decrypter
+  ]
+
   versioning {
     enabled = var.google_storage_bucket_versioning_enabled
   }
