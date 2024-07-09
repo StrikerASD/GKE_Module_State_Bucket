@@ -22,6 +22,7 @@ resource "google_kms_crypto_key_iam_member" "iam_for_crypto_key" {
 resource "google_storage_bucket" "terraform_state_bucket" {
   name     = var.google_storage_bucket_name
   location = var.google_storage_bucket_location
+  project  = var.google_kms_key_ring_project
 
   versioning {
     enabled = var.google_storage_bucket_versioning_enabled
