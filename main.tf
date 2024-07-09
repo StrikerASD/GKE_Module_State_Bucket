@@ -1,3 +1,11 @@
+## We obtain GS service account in GCP console >> Cloud Storage >> Settings
+
+resource "google_kms_crypto_key_iam_member" "crypto_key_encrypter_decrypter" {
+  crypto_key_id = google_kms_crypto_key.my_key.id
+  role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
+  member        = "serviceAccount:${var.google_service_account_account_id}"
+}
+
 resource "google_kms_key_ring" "my_keyring" {
   name     = var.google_kms_key_ring_name
   location = var.google_kms_key_ring_location

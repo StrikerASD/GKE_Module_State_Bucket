@@ -1,6 +1,6 @@
 variable "google_service_account_account_id" {
   type = string
-  default = "gcs-service-account"
+  default = "service-376765086748@gs-project-accounts.iam.gserviceaccount.com"
 }
 
 variable "google_service_account_display_name" {
