@@ -1,4 +1,5 @@
 resource "google_service_account" "gcs_service_account" {
+  project = var.google_kms_key_ring_project
   account_id   = var.google_service_account_account_id
   display_name = var.google_service_account_display_name
 }
