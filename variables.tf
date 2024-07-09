@@ -26,11 +26,6 @@ variable "google_kms_crypto_key_rotation_period" {
   default = "100000s"
 }
 
-variable "google_kms_crypto_key_iam_member_crypto_key_id" {
-  type = string
-  description = "We obtain this from existing field - gke-keyring: (crypto_key_id = google_kms_crypto_key.my_key.id), it depends on resource name - my_key in this example"
-}
-
 variable "google_kms_crypto_key_iam_member_role" {
   type = string
   description = "Describe IAM role for access to the keyring"
