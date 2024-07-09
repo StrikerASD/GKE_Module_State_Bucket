@@ -1,3 +1,13 @@
+variable "google_service_account_account_id" {
+  type = string
+  default = "gcs-service-account"
+}
+
+variable "google_service_account_display_name" {
+  type = string
+  default = "GCS Service Account"
+}
+
 variable "google_kms_key_ring_name" {
   type = string
   description = "Please enter keyring name"

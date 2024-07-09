@@ -1,3 +1,20 @@
+resource "google_service_account" "gcs_service_account" {
+  account_id   = var.google_service_account_account_id
+  display_name = var.google_service_account_display_name
+}
+
+resource "google_project_iam_member" "storage_admin_role" {
+  project = var.google_kms_key_ring_project
+  role    = "roles/storage.admin"
+  member  = "serviceAccount:${google_service_account.gcs_service_account.email}"
+}
+
+resource "google_kms_crypto_key_iam_member" "crypto_key_encrypter_decrypter" {
+  crypto_key_id = google_kms_crypto_key.my_key.id
+  role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
+  member        = "serviceAccount:${google_service_account.gcs_service_account.email}"
+}
+
 resource "google_kms_key_ring" "my_keyring" {
   name     = var.google_kms_key_ring_name
   location = var.google_kms_key_ring_location
