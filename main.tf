@@ -24,9 +24,7 @@ resource "google_storage_bucket" "terraform_state_bucket" {
   location = var.google_storage_bucket_location
   project  = var.google_kms_key_ring_project
 
-  uniform_bucket_level_access {
-    enabled = true
-  }
+  uniform_bucket_level_access = true
 
   versioning {
     enabled = var.google_storage_bucket_versioning_enabled
