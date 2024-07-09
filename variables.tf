@@ -48,6 +48,12 @@ variable "google_storage_bucket_location" {
   default = "europe-west3"
 }
 
+variable "google_storage_bucket_uniform_bucket_level_access" {
+  type = bool
+  description = "UBLA"
+  default = true
+}
+
 variable "google_storage_bucket_versioning_enabled" {
   type = bool
   description = "Specify if versioning of the bucket shall apply"
