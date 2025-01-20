@@ -1,7 +1,5 @@
-### google_service_account_account_id is taken directly from GCP >> Cloud Storage >> Settings
 variable "google_service_account_account_id" {
   type    = string
-  default = "service-558100685213@gs-project-accounts.iam.gserviceaccount.com"
 }
 
 variable "google_service_account_display_name" {
