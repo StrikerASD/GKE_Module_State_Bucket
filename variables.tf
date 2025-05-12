@@ -1,7 +1,7 @@
 ### google_service_account_account_id is taken directly from GCP >> Cloud Storage >> Settings
+# Example of service account id: service-558100685213@gs-project-accounts.iam.gserviceaccount.com
 variable "google_service_account_account_id" {
   type    = string
-  default = "service-558100685213@gs-project-accounts.iam.gserviceaccount.com"
 }
 
 # variable "google_service_account_display_name" {
@@ -17,7 +17,6 @@ variable "google_kms_key_ring_name" {
 variable "google_kms_key_ring_location" {
   type        = string
   description = "Location of the keyring. By default it will be europe-west3"
-  default     = "europe-west3"
 }
 
 variable "google_kms_key_ring_project" {
@@ -55,7 +54,6 @@ variable "google_storage_bucket_name" {
 variable "google_storage_bucket_location" {
   type        = string
   description = "Location of storage bucket, default is europe-west3"
-  default     = "europe-west3"
 }
 
 variable "google_storage_bucket_versioning_enabled" {
